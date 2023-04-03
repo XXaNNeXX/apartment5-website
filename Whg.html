@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="flat" content="Ferienwohnung">
+        <meta name="author" content="Anne">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Apartment 5 - Die Wohnung
+        </title>
+        <link rel="icon" type="image/x-icon" href=".\favicon.gif">
+        <link rel="stylesheet" href=".\App_css.css" type="text/css">
+        <link rel="stylesheet" href=".\slide_style.css">
+        <script src="./jquery-3.6.3.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <div class="flag-dropdown">
+                        <img src=".\de-flag.PNG" alt="" width="25" height="15">
+                            <div class="flag-dropdown-content">
+                            <img src=".\en-flag.PNG" alt="" width="25" height="15">
+                            <a href="https://www.apartment5.de/en/home"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="https://www.apartment5.de/kontakt">Kontakt</a></li>
+                    <li><a href="https://www.apartment5.de/diestadt">Die Stadt</a></li>
+                    <li><a href=".\Whg.html">Die Wohnung</a></li>
+                    <li><a href=".\App_Site.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="content">
+                <div id="slideshow-container">              
+                    <div id="tileHolder">
+                    <div>
+                        <img src=".\Schlafzimmer_3_wbs.jpg">
+                    </div>
+                    <div>        
+                        <img src=".\Schlafzimmer_7_wbs.jpg">
+                    </div>
+                    <div>          
+                        <img src=".\Arbeitszimmer_5_wbs.jpg" >
+                    </div>
+                    <div>
+                        <img src=".\Arbeitszimmer_1_wbs.jpg">
+                    </div>
+                    <div>
+                        <img src=".\Arbeitszimmer_11_wbs.jpg">
+                    </div>
+                    </div>
+                </div>
+                
+                    <a class="prev" type="button">&#10094;</a>
+                    <a class="next" type="button">&#10095;</a>
+                
+            </div>
+            <script>
+                $(document).ready(function() {
+                   
+                    $(".next").on("click", function() {
+                        
+                        $("#tileHolder").animate({marginLeft:"-=467px"},500);
+                        $("#tileHolder div:first-child").appendTo("#tileHolder");
+                        $("#tileHolder").css("margin-left","+=467px");
+                        
+                    }),
+
+                    $(".prev").on("click", function() {
+                        $("#tileHolder").animate({marginLeft: "+=467px"},500);
+                        $("#tileHolder div:last-child").prependTo("#tileHolder");
+                        $("tileHolder").css("margin-left","-467px");
+                    })
+                })
+            </script>
+            <article>
+              <div class="text">
+                  <h1 class="h1-headline">Viel Platz, viel zu entdecken</h1>
+                  <p class="paragraph">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <br><br>
+                  <p class="paragraph">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+              </div>
+          </article>                
+        </main>
+        <footer>
+            <div class="footer-box">
+                <ul class="footer-columns">
+                    <li>Impressum</li>
+                    <li>Anfahrt</li>
+                    <li>Kontakt</li>
+                </ul>
+                <ul class="footer-columns">
+                    <li>FAQs</li>
+                </ul>
+                <ul class="footer-columns">
+                    <li>Follow</li>
+                    <li><img src=".\insta.PNG"></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
